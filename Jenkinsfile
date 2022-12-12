@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch:main, url: 'https://github.com/sanjayganesh5/pythoncicd.git'
+                git branch: 'main', url: 'https://github.com/sanjayganesh5/pythoncicd.git'
             }
         }
         stage('Install Coverage') {
