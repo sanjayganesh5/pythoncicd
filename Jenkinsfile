@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Coverage') {
             steps {
-                sh 'pip install coverage'
+                sh 'python -m pip install coverage'
             }
         }
         stage('Generate Coverage') {
