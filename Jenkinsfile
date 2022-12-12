@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Clone Repo') {
             steps {
@@ -7,6 +7,11 @@ pipeline {
             }
         }
         stage('Install Coverage') {
+            agent {
+                docker {
+                    image 'python:2-alpine'
+                }
+            }
             steps {
                 sh 'python -m pip install coverage'
             }
